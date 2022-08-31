@@ -1,15 +1,21 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import NavBar from './components/Navbar';
+import { BrouserRouter, Router, Route, Switch } from "react";
+
+
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hola mundo.
-        </p>
-      </header>
+     <Router>
+      <NavBar />
+      <Switch>
+        <Route path='/' exact/>
+      </Switch>
+      </Router>
     </div>
   );
 }
